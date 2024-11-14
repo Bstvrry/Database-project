@@ -1,0 +1,11 @@
+CREATE TABLE PlantingTable ( TreeID INT PRIMARY KEY, Location VARCHAR(50), Growth_Rate DECIMAL, SpeciesID INT, FOREIGN KEY (SpeciesID) REFERENCES SpeciesTable(SpeciesID) );
+INSERT INTO Planting (Tree_ID, Location, Species_ID, Growth_Rate)
+VALUES 
+(1, 'Location A', 101, 5.0);
+(2, 'Location B', 102, 3.0);
+(3, 'Location C', (103, 4.0);
+(4, 'Location D', (104, 3.3);
+(5, 'Location E', (105, 7.0);
+(6, 'Location F', (106, 2.0);
+(7, 'Location G', (107, 1.2);
+(8, 'Location H', (108, 3.5);
