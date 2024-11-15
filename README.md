@@ -16,7 +16,7 @@ SCOPE
 The database will be able to provide information about the tree species planted in an area, as well as their benefits, requirements and characteristics. Project data will also be considered providing location of a project, tree species planted and number of trees. Survival rates will be recorded to track survival of trees planted over time and maybe include causes of tree death. 
 
  The impact on local ecosystems will also be covered, noting how soil erosion, soil pH and biodiversity are affected. Growth rate of trees will be tracked to note which tree species do well in what climate. Volunteer management will be included wishers and non-profitable organizations as well may be involved. 
-
+<
  
 
  
