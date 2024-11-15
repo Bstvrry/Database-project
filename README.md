@@ -7,7 +7,7 @@ Deforestation, environmental degradation and climate change are significant chal
 
 For these tree planting initiatives, what they lack is proper data management in that a manual filing system maybe used to store records and lack of accountability in that nobody can follow on a singular project and the inability to measure true ecological impact on local ecosystems. Without a centralized way of data management, it is challenging to reverse the climatic damage. 
 
-Thus, our tree planting and reforestation database is a database that monitors and tracks tree planting and reforestation initiatives. The database mainly stores data on various projects, such as species planted, geographical locations, survival rates, growth progress and the impact on the local ecosystems. It is therefore a centralized system designed to manage, monitor and track tree planting initiatives. In addition, the database will serve as a tool to analyse reforestation efforts, provide insights into ecosystem recovery and track carbon reduction efforts over time.  
+ Thus, our tree planting and reforestation database is a database that monitors and tracks tree planting and reforestation initiatives. The database mainly stores data on various projects, such as species planted, geographical locations, survival rates, growth progress and the impact on the local ecosystems. It is therefore a centralized system designed to manage, monitor and track tree planting initiatives. In addition, the database will serve as a tool to analyse reforestation efforts, provide insights into ecosystem recovery and track carbon reduction efforts over time.  
 
 The database aligns primarily with SDG 13 on climate action and SDG 15 on Life on Land. 
 
