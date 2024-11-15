@@ -1,0 +1,10 @@
+CREATE TABLE volunteers_assignment ( volunteer_id VARCHAR(50) PRIMARY KEY, volunteer_name VARCHAR(100), project_id INT, tree_id INT, date_joined DATE,role VARCHAR(20));
+INSERT INTO volunteers_assignment VALUES('T210', 'Ted Kombo', 101, 1, '2024-11-13', 'watering');
+INSERT INTO volunteers_assignment VALUES('T220', 'Ben Dover', 102, 2, '2024-11-14', 'planting');
+INSERT INTO volunteers_assignment VALUES('T230', 'Teddy Kin', 103, 3, '2024-11-15', 'mulching');
+INSERT INTO volunteers_assignment VALUES('T240', 'Telvin Hov', 104, 4, '2024-11-16', 'cultivating');
+INSERT INTO volunteers_assignment VALUES('T250', 'Tyler Olkolma', 105, 5, '2024-11-17', 'pruning');
+INSERT INTO volunteers_assignment VALUES('T260', 'Ken Drick', 106, 6, '2024-11-17', 'watering');
+INSERT INTO volunteers_assignment VALUES('T270', 'Lamar Davis', 107, 7, '2024-11-18', 'weeding');
+INSERT INTO volunteers_assignment VALUES('T280', 'Lee Brass', 108, 8, '2024-11-19', 'weeding');
+INSERT INTO volunteers_assignment VALUES('T290', 'Steve Tim', 109, 9, '2024-11-20', 'watering');
