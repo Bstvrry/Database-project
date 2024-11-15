@@ -1,3 +1,4 @@
+
 create table project (project_id int primary key, project_name varchar(50), location varchar(50), status varchar(20), speciesID int);
 insert into project values(001,'Bloom','Nakuru','Completed',103);
 insert into project values(002,'Releaf','Wajir','Pending',101);
@@ -22,7 +23,7 @@ insert into Species values(108,'cypress','United States',5.6,004);
 insert into Species values(109,'eucalyptus','Australia',7.9,009);
 insert into Species values(110,'catalpa','United States',6.0,003);
 
-create table GrowthRate (growth_rate decimal, location varchar(50), species_id int, treeID int);
+create table GrowthRate (growth_rate decimal primary key, location varchar(50), species_id int, treeID int);
 insert into GrowthRate values (6.0,'Nakuru',101,1201);
 insert into GrowthRate values(7.9,'Wajir',102,1202);
 insert into GrowthRate values(5.6,'Nairobi',103,1203);
@@ -46,6 +47,18 @@ insert into PlantingTable values (7, 'Muranga', 107, 1.2);
 insert into PlantingTable values (8, 'Sugoi', 108, 3.5);
 insert into PlantingTable values (9, 'Naivasha', 109, 3.5);
 insert into PlantingTable values (10, 'Wajir', 110, 3.5);
+
+create table volunteers(volunteer_id varchar(50) primary key,volunteer_name varchar(100),project_id INT);
+insert into volunteers values('T210''Ted Kombo',001);
+insert into volunteers values('T220''Ben Dover',002);
+insert into volunteers values('T230''Teddy Kin',003);
+insert into volunteers values('T240''Telvin Hov',004);
+insert into volunteers values('T250''Tyler Olkolma',005);
+insert into volunteers values('T260''Ken Drick',006);
+insert into volunteers VALUES('T270''Lamar Davis',007);
+insert into volunteers VALUES('T280''Kim Kyle',008);
+insert into volunteers VALUES('T290''Lee Brass',009);
+insert into volunteers VALUES('T300''Steve Tim',010);
 
 create table volunteers_assignment ( volunteer_id varchar(50) primary key, volunteer_name varchar(100), project_id int, tree_ID int, date_joined date,role varchar(20));
 insert into volunteers_assignment values('T210', 'Ted Kombo', 101, 1, '2024-11-13', 'watering');
