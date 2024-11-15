@@ -1,5 +1,5 @@
 insert into project values(001,'Bloom','Nakuru','Completed',103);
-insert into project values(002,'Releaf','Karen','Pending',101);
+insert into project values(002,'Releaf','Wajir','Pending',101);
 insert into project values(003,'Revive','Nairobi','In-progress',104);
 insert into project values(004,'Canopy','Meru','Completed',110);
 insert into project values(005,'Sprout','Nyeri','Completed',107);
@@ -26,6 +26,21 @@ insert into GrowthRate values(20,nairobi,103,1003);
 insert into GrowthRate values(12,meru,104,1003);
 insert into GrowthRate values(29,nyeri,105,1005);
 insert into GrowthRate values(24,naivasha,106,1006);
+
+CREATE TABLE PlantingTable ( TreeID INT PRIMARY KEY, Location VARCHAR(50), Growth_Rate DECIMAL, SpeciesID INT, FOREIGN KEY (SpeciesID) REFERENCES SpeciesTable(SpeciesID) );
+INSERT INTO PlantingTable VALUES (1, 'Nairobi', 101, 5.0);
+INSERT INTO PlantingTable VALUES (2, 'Nyeri', 102, 3.0);
+INSERT INTO PlantingTable VALUES (3, 'Meru', 103, 4.0);
+INSERT INTO PlantingTable VALUES (4, 'Nakuru',104, 3.);
+INSERT INTO PlantingTable VALUES (5, 'Tigoni', 105, 7.0);
+INSERT INTO PlantingTable VALUES (6, 'Lamu', 106, 2.0);
+INSERT INTO PlantingTable VALUES (7, 'Muranga', 107, 1.2);
+INSERT INTO PlantingTable VALUES (8, 'Sugoi', 108, 3.5);
+INSERT INTO PlantingTable VALUES (9, 'Naivasha', 109, 3.5);
+INSERT INTO PlantingTable VALUES (10, 'Wajir', (110, 3.5);
+
+
+
 
 
 CREATE TABLE volunteers_assignment ( volunteer_id VARCHAR(50) PRIMARY KEY, volunteer_name VARCHAR(100), project_id INT, tree_id INT, date_joined DATE,role VARCHAR(20));
