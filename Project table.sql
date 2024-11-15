@@ -34,7 +34,6 @@ insert into GrowthRate values(5.0,'Tigoni',107,1207);
 insert into GrowthRate values(5.7,'Lamu',108,1208);
 insert into GrowthRate values(4.6,'Muranga',109,1209);
 insert into GrowthRate values(4.7,'Sugoi',110,1210);
-select*from GrowthRate;
 
 create table PlantingTable (treeID int primary key, Location varchar(50), SpeciesID int, growth_rate decimal);
 insert into PlantingTable values (1, 'Nairobi', 101, 5.0);
