@@ -1,4 +1,3 @@
-
 create table project (project_id int primary key, project_name varchar(50), location varchar(50), status varchar(20), speciesID int);
 insert into project values(001,'Bloom','Nakuru','Completed',103);
 insert into project values(002,'Releaf','Wajir','Pending',101);
