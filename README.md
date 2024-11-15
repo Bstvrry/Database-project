@@ -1,8 +1,6 @@
 # Database-project
+
 PROJECT IDEA DEFINTION: TREE PLANTING AND REFORESTATION DATABASE
-
-DEFINITON 
-
 Deforestation, environmental degradation and climate change are significant challenges that not only Kenya but also the world faces today. In recent decades, Kenya has experienced deforestation due to agricultural expansion, urbanization and illegal logging. These activities have led to the loss of biodiversity, soil degradation, increased soil pH and increased carbon emissions contributing to adverse climate change impacts. To turn around the situation, the Kenyan government has taken the initiative of tree planting and reforestation but tracking these initiatives has been inefficient. 
 
 For these tree planting initiatives, what they lack is proper data management in that a manual filing system maybe used to store records and lack of accountability in that nobody can follow on a singular project and the inability to measure true ecological impact on local ecosystems. Without a centralized way of data management, it is challenging to reverse the climatic damage. 
