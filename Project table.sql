@@ -81,14 +81,3 @@ insert into EcosystemImpact values (008, 3, -0.2, 'High', 1.0, '2024-11-08');
 insert into EcosystemImpact values (009, 5, 0.6, 'Medium', 1.8, '2024-11-09');
 insert into EcosystemImpact values (010, 6, 0.0, 'Low', 2.2, '2024-11-10');
 
-create table project (project_id int primary key, project_name varchar(50), location varchar(50), status varchar(20), speciesID int);
-insert into project values(001,'Bloom','Nakuru','Completed',103);
-insert into project values(002,'Releaf','Wajir','Pending',101);
-insert into project values(003,'Revive','Nairobi','In-progress',104);
-insert into project values(004,'Canopy','Meru','Completed',110);
-insert into project values(005,'Sprout','Nyeri','Completed',107);
-insert into project values(006,'Reforest','Naivasha','Pending',102);
-insert into project values(007,'Greeenery','Tigoni','In-progress',105);
-insert into project values(008,'Sprout','Lamu','Completed',106);
-insert into project values(009,'Renew','Muranga','Pending',109);
-insert into project values(010,'Flourish','Sugoi','In-progress',108);
