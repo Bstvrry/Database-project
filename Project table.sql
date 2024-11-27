@@ -10,7 +10,6 @@ insert into project values(008,'Sprout','Lamu','Completed',106);
 insert into project values(009,'Renew','Muranga','Pending',109);
 insert into project values(010,'Flourish','Sugoi','In-progress',108);
 
-
 create table Species (species_id int primary key, species_name varchar(50), nativeArea varchar(50),growth_rate decimal, project_id int);
 insert into Species values(101,'red maple','North America',4.6,006);
 insert into Species values(102,'white oak','North America',4.7,001);
@@ -70,7 +69,7 @@ insert into volunteers_assignment values('T270', 'Lamar Davis', 107, 7, '2024-11
 insert into volunteers_assignment values('T280', 'Lee Brass', 108, 8, '2024-11-19', 'weeding');
 insert into volunteers_assignment values('T290', 'Steve Tim', 109, 9, '2024-11-20', 'watering');
 
-create table EcosystemImpact (impact_id int primary key, project_id int not null, biodiversity_change int, soil_ph_change decimal(4, 2), soil_erosion_level varchar(10), carbon_sequestration decimal(10, 2), date_measured date);
+create table EcosystemImpact (impact_id int primary key, project_id int not null, biodiversity_change int, soil_erosion_level varchar(10), carbon_sequestration decimal(10, 2), date_measured date);
 insert into EcosystemImpact values (001, 5, 0.2, 'Low', 1.2, '2024-11-01');
 insert into EcosystemImpact values (002, 3, -0.1, 'Medium', 1.5, '2024-11-02');
 insert into EcosystemImpact values (003, 7, 0.5, 'Low', 2.1, '2024-11-03');
