@@ -10,6 +10,7 @@ insert into project values(008,'Sprout','Lamu','Completed',106);
 insert into project values(009,'Renew','Muranga','Pending',109);
 insert into project values(010,'Flourish','Sugoi','In-progress',108);
 
+
 create table Species (species_id int primary key, species_name varchar(50), nativeArea varchar(50),growth_rate decimal, project_id int);
 insert into Species values(101,'red maple','North America',4.6,006);
 insert into Species values(102,'white oak','North America',4.7,001);
@@ -81,3 +82,46 @@ insert into EcosystemImpact values (008, 3, -0.2, 'High', 1.0, '2024-11-08');
 insert into EcosystemImpact values (009, 5, 0.6, 'Medium', 1.8, '2024-11-09');
 insert into EcosystemImpact values (010, 6, 0.0, 'Low', 2.2, '2024-11-10');
 
+update project
+set status = 'Completed'
+where project_id = 2;
+
+delete from volunteers
+where volunteer_id = 'T300';
+
+alter table Species
+add column endangered_status varchar(20);
+
+select p.projectid, p.name, p.location, p.status, s.name, s.nativeArea, s.grwothrate
+from project p
+inner join Species s
+on p.speciesid = s.speciesid;
+
+select s.speciesid, s.name, s.nativearea, p.location
+from Species s
+join Project p on s.projectid = p.projectid
+where p.location = 'Nairobi';
+
+select projectid, name, location, status
+from project
+where status = 'Completed';
+
+select p.project_name, v.volunteer_name
+from project p
+left join volunteers v on p.project_id = v.project_id;
+
+select project_name
+from project
+where location = 'Nairobi'
+union
+select project_name
+from project
+where status = 'Pending';
+
+select project_name
+from project
+where location = 'Nairobi'
+intersect
+select project_name
+from project
+where status = 'In-progress';
