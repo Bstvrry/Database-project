@@ -69,17 +69,17 @@ insert into volunteers_assignment values('T270', 'Lamar Davis', 107, 7, '2024-11
 insert into volunteers_assignment values('T280', 'Lee Brass', 108, 8, '2024-11-19', 'weeding');
 insert into volunteers_assignment values('T290', 'Steve Tim', 109, 9, '2024-11-20', 'watering');
 
-create table EcosystemImpact (impact_id int primary key, project_id int not null, biodiversity_change int, soil_erosion_level varchar(10), carbon_sequestration decimal(10, 2), date_measured date);
-insert into EcosystemImpact values (001, 5, 0.2, 'Low', 1.2, '2024-11-01');
-insert into EcosystemImpact values (002, 3, -0.1, 'Medium', 1.5, '2024-11-02');
-insert into EcosystemImpact values (003, 7, 0.5, 'Low', 2.1, '2024-11-03');
-insert into EcosystemImpact values (004, 2, -0.3, 'High', 0.8, '2024-11-04');
-insert into EcosystemImpact values (005, 6, 0.1, 'Medium', 1.9, '2024-11-05');
-insert into EcosystemImpact values (006, 4, 0.4, 'Low', 2.0, '2024-11-06');
-insert into EcosystemImpact values (007, 8, 0.3, 'Low', 2.4, '2024-11-07');
-insert into EcosystemImpact values (008, 3, -0.2, 'High', 1.0, '2024-11-08');
-insert into EcosystemImpact values (009, 5, 0.6, 'Medium', 1.8, '2024-11-09');
-insert into EcosystemImpact values (010, 6, 0.0, 'Low', 2.2, '2024-11-10');
+create table EcosystemImpact (impact_id  serial primary key, project_id int not null, biodiversity_change decimal(5, 2), soil_erosion_level varchar(10), carbon_sequestration decimal(10, 2), date_measured date);
+insert into EcosystemImpact values (5, 0.2, 'Low', 1.2, '2024-11-01'),
+insert into EcosystemImpact values (3, -0.1, 'Medium', 1.5, '2024-11-02'),
+insert into EcosystemImpact values (7, 0.5, 'Low', 2.1, '2024-11-03'),
+insert into EcosystemImpact values (2, -0.3, 'High', 0.8, '2024-11-04'),
+insert into EcosystemImpact values (6, 0.1, 'Medium', 1.9, '2024-11-05'),
+insert into EcosystemImpact values (4, 0.4, 'Low', 2.0, '2024-11-06'),
+insert into EcosystemImpact values (8, 0.3, 'Low', 2.4, '2024-11-07'),
+insert into EcosystemImpact values (3, -0.2, 'High', 1.0, '2024-11-08'),
+insert into EcosystemImpact values (5, 0.6, 'Medium', 1.8, '2024-11-09'),
+insert into EcosystemImpact values (6, 0.0, 'Low', 2.2, '2024-11-10');
 
 update project
 set status = 'Completed'
@@ -90,24 +90,6 @@ where volunteer_id = 'T300';
 
 alter table Species
 add column endangered_status varchar(20);
-
-select p.projectid, p.name, p.location, p.status, s.name, s.nativeArea, s.grwothrate
-from project p
-inner join Species s
-on p.speciesid = s.speciesid;
-
-select s.speciesid, s.name, s.nativearea, p.location
-from Species s
-join Project p on s.projectid = p.projectid
-where p.location = 'Nairobi';
-
-select projectid, name, location, status
-from project
-where status = 'Completed';
-
-select p.project_name, v.volunteer_name
-from project p
-left join volunteers v on p.project_id = v.project_id;
 
 select project_name
 from project
@@ -124,3 +106,21 @@ intersect
 select project_name
 from project
 where status = 'In-progress';
+
+select p.project_name, v.volunteer_name
+from project p
+left join volunteers v on p.project_id = v.project_id;
+
+select projectid, name, location, status
+from project
+where status = 'Completed';
+
+select s.speciesid, s.name, s.nativearea, p.location
+from Species s
+join Project p on s.projectid = p.projectid
+where p.location = 'Nairobi';
+
+select p.projectid, p.name, p.location, p.status, s.name, s.nativeArea, s.grwothrate
+from project p
+inner join Species s
+on p.speciesid = s.speciesid;
